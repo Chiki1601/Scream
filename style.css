@@ -1,0 +1,243 @@
+.container {
+  font-size: 13px;
+  position: relative;
+  width: 43.75em;
+  height: 43.75em;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scream {
+  font-size: 1.333em;
+  position: relative;
+  color: #050505;
+  z-index: 1;
+}
+
+.scream__head {
+  position: relative;
+  width: 7.6875em;
+  height: 7.125em;
+  border-radius: 2.5em 0 0 0;
+  background-color: currentColor;
+  z-index: 1;
+}
+.scream__head::before, .scream__head::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+}
+.scream__head::before {
+  right: -0.9375em;
+  width: 1.25em;
+  height: 2.1875em;
+  background-color: currentColor;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.scream__head::after {
+  bottom: -0.0625em;
+  right: -0.6875em;
+  width: 2.0625em;
+  height: 6.25em;
+  border-radius: 0 0 2.0625em 2.0625em;
+  transform: rotate(-14deg);
+}
+
+.scream__mask {
+  position: absolute;
+  top: 1.875em;
+  left: 1.1875em;
+  width: 3.9375em;
+  height: 5.125em;
+  border-radius: 2.5em;
+  background-color: #fdfdfd;
+}
+.scream__mask::before {
+  content: "";
+  position: absolute;
+  bottom: -1.875em;
+  left: 50%;
+  width: 1.9375em;
+  height: 2.1875em;
+  transform: translateX(-50%);
+  border-radius: 0 0 1.25em 1.25em;
+  background-color: inherit;
+}
+
+.scream__maskInner {
+  position: absolute;
+  bottom: -1.5625em;
+  left: 50%;
+  width: 0.9375em;
+  height: 3.4375em;
+  border-radius: 0.9375em;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+.scream__maskInner::before, .scream__maskInner::after {
+  content: "";
+  position: absolute;
+  top: -1.75em;
+  width: 2.0625em;
+  height: 1.03125em;
+  border-radius: 0 0 1.03125em 1.03125em;
+  transform: rotate(-45deg);
+  background-color: currentColor;
+}
+.scream__maskInner::before {
+  left: -1.25em;
+}
+.scream__maskInner::after {
+  right: -1.375em;
+  transform: rotate(45deg) scaleX(-1);
+}
+
+.scream__body {
+  position: relative;
+  width: 9.4375em;
+  height: 10.8125em;
+  background-color: currentColor;
+}
+.scream__body::before, .scream__body::after {
+  content: "";
+  position: absolute;
+  width: 4.125em;
+  height: 9.5625em;
+  background-color: currentColor;
+  clip-path: polygon(0 0, 100% 0, 100% 4.625em, 0 100%);
+  z-index: 1;
+}
+.scream__body::before {
+  left: -3.9375em;
+}
+.scream__body::after {
+  right: -3.9375em;
+  transform: scaleX(-1);
+}
+
+.scream__arm {
+  position: absolute;
+  width: 5.625em;
+  height: 2.25em;
+  background-color: currentColor;
+}
+
+.scream__arm--isLeft {
+  left: -5.625em;
+  border-radius: 2.25em 0 0 2.25em;
+}
+.scream__arm--isLeft::before {
+  content: "";
+  position: absolute;
+  left: 0.9375em;
+  width: 0.8125em;
+  height: 2.875em;
+  background-color: #d8d5ce;
+}
+
+.scream__knife {
+  position: absolute;
+  bottom: 0.9375em;
+  width: 1.5625em;
+  height: 6.9375em;
+  border-radius: 1.5625em 0 0 0;
+  z-index: -1;
+}
+.scream__knife::before {
+  content: "";
+  position: absolute;
+  bottom: -0.875em;
+  left: -0.4375em;
+  width: 0.875em;
+  height: 0.875em;
+  border-radius: 0 0.875em 0.875em 0.875em;
+  transform: rotate(45deg);
+  background-color: #ed1e26;
+}
+
+.scream__knifeCut {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.scream__knifeCut::before {
+  content: "";
+  position: absolute;
+  right: -1.25em;
+  width: 2.1875em;
+  height: 2.1875em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6.25em #d8d5ce;
+}
+.scream__knifeCut::after {
+  content: "";
+  display: inherit;
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(40deg, #ed1e26 32.5%, transparent 0);
+}
+
+.scream__arm--isRight {
+  right: -5.625em;
+  border-radius: 0 2.25em 2.25em 0;
+}
+
+.scream__coatEnd {
+  position: absolute;
+  bottom: -1.5625em;
+  border: 0.9375em solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  z-index: 1;
+}
+.scream__coatEnd::before, .scream__coatEnd::after {
+  content: "";
+  position: absolute;
+  top: -0.9375em;
+}
+.scream__coatEnd::before {
+  right: -5em;
+  border: inherit;
+}
+.scream__coatEnd::after {
+  right: -8.5em;
+  border: 0.9375em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.scream__feet {
+  position: absolute;
+  bottom: -3.75em;
+  left: 1.5625em;
+  width: 2.5em;
+  height: 4.0625em;
+  background-color: currentColor;
+  box-shadow: 4.0625em 0;
+}
+.scream__feet::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3.75em;
+  height: 1.5625em;
+  border-radius: 1.5625em 0 0 1.5625em;
+  color: #3a3a3a;
+  background-color: currentColor;
+  box-shadow: inherit;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+}
